@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+    crossorigin="anonymous" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home - Page</title>
+</head>
+<body>
+  <!-- Header -->
+  <header id="">
+    <div class="subheader">
+      <ul class="container flex">
+        <li id="email"><i class="fas fa-envelope"><a href="mailto:info@furniture4u.co.uk"> info@furniture4u.co.uk</a></i></li>
+        <li><i class="fas fa-phone"><a href="tel:01433-456-890"> 01433-456-890</a></i></li>
+        <li><button id="modalBtn" class="btn">Request a Free Design Visit</button></li>
+      </ul>
+    <!-- Modal -->
+    <div class="modal" id="requestVisit">
+      <div class="modal-content">
+        <span class="closeBtn" id="closeBtn">&times;</span>
+          <h1 class="flex">Request a Design Visit</h1>
+          <p>Please complete your details below. A member of our team will then be in touch to arrange a suitable time
+             to speak to you. Alternatively call us on 01433-456-890.</p>
+          <br>
+          <form action="action_page.php">
+          
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="Your name...">
+          
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lastname" placeholder="Your last name...">
+
+            <label for="postcode">Postcode</label>
+            <input type="text" id="postcode" name="postcode" placeholder="Your postcode...">
+          
+            <label for="mobile">Mobile Number</label>
+            <input type="text" id="mobile" name="mobile" placeholder="Please enter your number...">
+          
+            <label for="subject">Subject</label>
+            <textarea id="subject" name="subject" placeholder="Any additional information..." style="height:70px"></textarea>
+          
+            <input type="submit" value="Submit">
+        
+          </form>
+      </div>
+    </div>
+    <!-- Navbar -->
+    </div>
+    <div class="navbar" id="navbar">
+      <div class="container flex">
+        <div class="logo flex">
+          <i class="fas fa-home orange"></i>
+          <p>Furniture4u</p>
+        </div>
+        <button class="hamburger" id="hamburger">
+          <i class="fa fa-bars"></i>
+        </button>
+        <nav class="topnav" id="topnav">
+          <a href="index.html">Home</a>
+          <a href="news.html">News</a>
+          <a href="contact.html">Contact</a>
+          <div class="dropdown">
+            <button class="dropbtn">Projects
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="kitchens.html">Kitchens</a>
+              <a href="#">Bedrooms</a>
+            </div>
+          </div>
+          <a href="about.html">About</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+<!-- Intro -->
+  <div class="intro flex column">
+    <div class="container slideshow">  
+
+      <div class="mySlides fade text flex column">
+        <h1>Free delivery on orders over £499!</h1>
+        <a href="#" class="btn">Read More!</a>
+      </div>
+      <div class="mySlides fade text flex column">
+        <h1>Extended 24 months guarantee on any product!</h1>
+        <a href="#" class="btn">Read More!</a>
+      </div>
+      <div class="mySlides fade text flex column">
+        <h1>Subscribe to our newsletter and get 10% discount!</h1>
+        <a href="#" class="btn">Read More!</a>
+      </div>
+    </div>
+    <div class="dots">
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+    <div class="consultation flex" >
+      <div class="consultation-item flex">
+        <i class="fas fa-pencil-ruler orange"></i>
+        <p>Entirely Bespoke</p>
+      </div>
+      <div class="consultation-item flex">
+        <i class="far fa-flag orange"></i>
+        <p>Handcrafted in the UK</p>
+      </div>
+      <div class="consultation-item flex">
+        <i class="far fa-thumbs-up orange"></i>
+        <p>The Finest Materials</p>
+      </div>
+    </div>    
+  </div>
+
+<!-- Main -->
+  <section class="main">
+    <div class="container">
+      <div class="grid card">
+        <div class="flex column" style="grid-area: item-1">
+          <h2>Design</h2>
+          <p>We’re design-led furniture specialists and have been since day one. Our people come from a mix of design backgrounds,
+          and every one of us is passionate about what we do – whether it’s finding the right mix of products and finishes to
+          reflect your brand, helping you create one-of-a-kind pieces or designing a solution that seamlessly integrates with your
+          smart building. Every detail matters to us and we’ll never compromise on your design aspirations.</p>
+        </div>
+        <img style="grid-area: item-2" src="/assets/images/img1.jpg">
+        <img style="grid-area: item-3" src="/assets/images/img2.jpg">
+        <div class="flex column" style="grid-area: item-4">
+          <h2>Bespoke</h2>
+          <p>We design & create bespoke Kitchens, Bedrooms & Interior Furniture to compliment your home, lifestyle & taste. Each
+          piece is made to measure to our clients specifications and unique in design! We do not have a standard range, we work
+          with you to create the Kitchen, Bedroom or Interior piece of furniture of your dreams – the possibilities are endless!</p>
+        </div>
+        <div class="flex column" style="grid-area: item-5">
+          <h2>Quality</h2>
+          <p>Our latest projects offer a glimpse of the high standards of craftsmanship we maintain along with the wide range of
+          materials we use including oak, ash, walnut, pine, cherry and our popular hand painted finish.</p>
+        </div>
+        <img style="grid-area: item-6" src="/assets/images/img3.jpg">
+      </div>
+
+      <div class="container flex column card">
+        <h1>Why Choose Furniture4u</h1>
+        <p>We combine the flair of the UK’s top designers with the time-honoured
+          skills of traditional craftsmen, all brought together with your selection of materials, colours and finishes. Check
+          out our projects
+          to see why we're the natural choice for those who don’t want to compromise.</p>
+        <a href="#" class="btn">Explore Projects!</a>
+      </div>
+    </div>
+  </section>
+
+<!-- Question -->
+  <footer>    
+    <div class="container">
+      <div class="question card flex column">
+        <h3>Have a Question?</h3>
+        <p>Just give us a call. Our friendly team can't wait to help you!</p>
+        <div class="flex">
+          <i class="fas fa-phone orange"></i>
+          <a href="tel:01433-456-890">01433-456-890</a>
+        </div>
+      </div> 
+    </div>
+    <div class="footer-main">
+      <div class="container">
+        <p class="copyright-text">Copyright &copy; 2021 All Rights Reserved by Furniture4u.</p>
+        <div class="footer-address flex">
+          <i class="fas fa-map-marker-alt"></i>
+          <p>Oldham Road, Ripponden West Yorks HX6 4EH</p>
+        </div>
+        <ul class="social-icons flex">
+          <li><a class="facebook" href="#"><i class="fab fa-facebook-square"></i></i></a></li>
+          <li><a class="twitter" href="#"><i class="fab fa-twitter"></i></a></li>
+          <li><a class="instagram" href="#"><i class="fab fa-instagram-square"></i></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/scripts.js"></script>
+</body>
+</html>
+
+
+
