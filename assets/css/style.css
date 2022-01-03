@@ -1,0 +1,606 @@
+@import url("https://fonts.googleapis.com/css2?family=Catamaran:wght@300&family=Roboto+Mono&display=swap");
+
+:root {
+  --primary-color: #f6f6f6;
+  --white-color: rgb(255, 255, 255);
+  --dark-color: rgb(27, 27, 27);
+  --orange-color: rgb(255, 211, 115);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Catamaran", sans-serif, "Roboto Mono", monospace;
+  /* font-family: "Roboto Mono", monospace; */
+  color: var(--dark-color);
+  /* line-height: 16px; */
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--dark-color);
+}
+
+p {
+  margin: 10px 0;
+}
+
+img {
+  width: 100%;
+}
+
+/* =================Header================= */
+header .subheader {
+  background-color: var(--primary-color);
+  color: var(--dark-color);
+  padding: 5px 15px;
+}
+
+.subheader .container.flex {
+  justify-content: space-between;
+}
+
+.subheader .btn {
+  margin: 0px;
+  color: var(--dark-color);
+  font-weight: 600;
+}
+
+/* Modal */
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  position: relative;
+  background-color: var(--primary-color);
+  margin: 20% auto;
+  padding: 20px;
+  width: 60%;
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.3);
+  animation-name: modalOpen;
+  animation-duration: 0.8s;
+}
+
+.modal-content h1 {
+  border-bottom: 3px solid var(--orange-color);
+}
+
+.closeBtn {
+  position: absolute;
+  color: var(--dark-color);
+  float: right;
+  font-size: 30px;
+  top: 5px;
+  right: 20px;
+}
+
+.closeBtn:hover,
+.closeBtn:focus {
+  color: #000;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+input[type="text"],
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type="submit"] {
+  background-color: var(--orange-color);
+  color: var(--dark-color);
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: rgb(255, 189, 91);
+}
+
+@keyframes modalOpen {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* =================Navbar================= */
+.navbar {
+  background-color: var(--white-color);
+  text-align: center;
+}
+.logo {
+  font-size: 24px;
+  font-weight: 700;
+  padding: 0 16px;
+}
+
+.logo i {
+  margin-right: 10px;
+}
+
+.navbar .container.flex {
+  justify-content: space-between;
+}
+
+.hamburger {
+  background: none;
+  display: none;
+  border: 0px;
+  color: var(--light-color);
+  font-size: 20px;
+  cursor: pointer;
+  padding-right: 10px;
+}
+
+.topnav {
+  display: flex;
+  overflow: hidden;
+}
+
+.navbar a {
+  color: var(--light-color);
+  display: block;
+}
+
+.navbar .flex {
+  position: relative;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  padding: 20px 16px;
+  font-size: 17px;
+  color: var(--dark-color);
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 17px;
+  border: none;
+  outline: none;
+  padding: 20px 16px;
+  color: var(--dark-color);
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: var(--primary-color);
+  color: var(--dark-color);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.topnav a:hover,
+.dropdown:hover .dropbtn {
+  background-color: var(--orange-color);
+}
+
+.dropdown-content a:hover {
+  background-color: rgb(255, 189, 91);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+  padding-top: 60px;
+}
+
+/* =================Intro================= */
+
+.intro {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  /* height: 100vh; */
+  height: 400px;
+  position: relative;
+  background: url("../images/furniture4u.png") center no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+
+.mySlides {
+  margin-top: 20px;
+  display: none;
+}
+
+.mySlides .btn {
+  font-size: 18px;
+}
+
+.mySlides h1 {
+  font-size: 28px;
+  margin-bottom: 40px;
+  color: var(--dark-color);
+}
+
+/* Slideshow container */
+.container.slideshow {
+  position: relative;
+  margin: 100px;
+}
+
+/* Caption text */
+.text {
+  color: var(--dark-color);
+  font-size: 24px;
+  padding: 8px 12px;
+  bottom: 8px;
+  text-align: center;
+  justify-content: center;
+}
+
+/* The dots/bullets/indicators */
+.dots {
+  position: absolute;
+  display: flex;
+  padding-top: 220px;
+}
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #9b9b9b;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: var(--orange-color);
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.consultation.flex .consultation-item {
+  /* background-color: var(--primary-color); */
+  background: var(--white-color);
+  width: 280px;
+  height: 100px;
+  margin: 0px 30px;
+  border-radius: 5px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  font-size: 20px;
+}
+
+.consultation.flex .consultation-item i {
+  margin-right: 10px;
+}
+
+/* Main */
+.main {
+  background: var(--primary-color);
+  padding: 70px 0px;
+}
+
+.main h1 {
+  border-bottom: 1px solid var(--dark-color);
+}
+
+.main p {
+  font-size: 18px;
+}
+
+.main img {
+  width: 460px;
+  height: 360px;
+}
+
+.main .container.flex.column {
+  margin-top: 50px;
+}
+
+.main .grid {
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas:
+    "item-1 item-2"
+    "item-3 item-4"
+    "item-5 item-6";
+}
+
+/* Footer */
+footer {
+  background: var(--primary-color);
+  padding-top: 0px;
+}
+
+footer .container {
+  padding-bottom: 50px;
+}
+.question.card {
+  font-size: 18px;
+  margin-top: -20px;
+}
+
+footer .orange {
+  margin-right: 5px;
+}
+
+.footer-main {
+  background: var(--primary-color);
+  border-top: 3px solid var(--orange-color);
+  font-size: 16px;
+}
+
+.footer-main .container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.social-icons a {
+  color: var(--dark-color);
+  font-size: 24px;
+  margin-left: 10px;
+}
+
+.footer-address i {
+  color: var(--dark-color);
+  margin-right: 5px;
+}
+/* =================Contact================= */
+.secondary {
+  background: var(--primary-color);
+}
+
+.secondary .container {
+  padding: 60px 0px;
+}
+/* =================About================= */
+.secondary .about-img {
+  max-height: 600px;
+  border-radius: 10px;
+}
+/* =================Projects================= */
+
+.proj-p {
+  max-width: 600px;
+  text-align: center;
+  margin: auto;
+  padding: 20px;
+}
+/* =================Utilities================= */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0px 40px;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.grid {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  background-color: var(--white-color);
+  color: var(--dark-color);
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  margin: 10px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 30px;
+  cursor: pointer;
+  background: var(--orange-color);
+  color: var(--dark-color);
+  border: none;
+  border-radius: 5px;
+  margin: 5px 0px;
+}
+
+.btn:hover {
+  transform: scale(0.98);
+}
+
+.orange {
+  color: var(--orange-color);
+}
+
+.border-bot {
+  border-bottom: 3px solid var(--orange-color);
+}
+/* ======================Small screens, laptops.====================== */
+@media (max-width: 1024px) {
+  .main .grid {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-areas:
+      "item-1"
+      "item-2"
+      "item-4"
+      "item-3"
+      "item-5"
+      "item-6";
+  }
+  .main img {
+    width: 650px;
+    justify-self: center;
+  }
+
+  .consultation.flex .consultation-item {
+    background: var(--white-color);
+    width: 230px;
+    height: 80px;
+    margin: 0px 10px;
+    border-radius: 5px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    font-size: 20px;
+  }
+}
+
+/* ==================Tablets and under=============== */
+@media (max-width: 768px) {
+  /* Navbar */
+
+  .topnav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .topnav.show {
+    display: flex;
+    align-items: flex-end;
+    line-height: 5px;
+  }
+
+  .topnav.show .dropdown {
+    line-height: 5px;
+    padding: 5px;
+  }
+
+  .topnav.show .dropdown .dropbtn {
+    line-height: 5px;
+    padding: 5px;
+    margin: 0px;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  #email {
+    display: none;
+  }
+
+  .intro {
+    display: none;
+  }
+
+  .main img {
+    height: 260px;
+    width: 350px;
+    justify-self: center;
+  }
+}
+
+/* ======================Mobiles====================== */
+@media (max-width: 500px) {
+  .container {
+    padding: 0px 5px;
+  }
+  .subheader .btn {
+    padding: 10px 8px;
+    margin-left: 6px;
+  }
+  .main {
+    background: var(--white-color);
+  }
+  .main .card {
+    box-shadow: none;
+  }
+  footer {
+    background: var(--white-color);
+  }
+  .contact-inner.flex {
+    flex-direction: column;
+  }
+}
