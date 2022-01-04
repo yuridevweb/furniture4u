@@ -400,6 +400,10 @@ footer {
 footer .container {
   padding-bottom: 50px;
 }
+
+.footer-address i {
+  margin-left: 10px;
+}
 .question.card {
   font-size: 18px;
   margin-top: -20px;

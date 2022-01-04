@@ -70,3 +70,6 @@ function myFunction() {
     navbar.classList.remove("sticky");
   }
 }
+
+/* Footer */
+document.getElementById("footerYear").innerHTML += new Date().getFullYear();
